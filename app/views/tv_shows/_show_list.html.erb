@@ -1,0 +1,8 @@
+<% @tv_shows.each do |show| %>
+	<tr>
+	  <td scope="row"><%= show.show%></td>
+	  <td><%= show.channel%></td>
+	  <td><%= show.timing%></td>
+	  <td><%= link_to "favourite", favourite_path(show), method: :get, remote: true%></td>
+	</tr>
+<%end%>

@@ -1,0 +1,22 @@
+development:
+  adapter: mysql2
+  database: favourite_show_development
+  host: localhost
+  username: root
+  password: password
+  socket: /var/run/mysqld/mysqld.sock
+
+test: &TEST
+  adapter: mysql2
+  database: favourite_show_test
+  host: localhost
+  username: root
+  password: password
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql2
+  database: favourite_show_production
+  host: localhost
+  username: root
+  password:

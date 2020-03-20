@@ -1,0 +1,28 @@
+<div class="container">
+  <h2 align="center">TV Shows</h2><hr>
+  <div id="search"><input type="text" placeholder="Search.." id="target"></div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Show Name</th>
+        <th>Channel</th>
+        <th>Timing</th>
+        <th>Mark as favourite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render :partial => "show_list"%>
+    </tbody>
+  </table>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#target").keyup(function(){
+      // alert(this.value);
+      $.ajax({url: "/",
+              type: 'GET',
+              data: {search_key: this.value} })
+    })
+  })
+</script>
